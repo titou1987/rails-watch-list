@@ -1,0 +1,13 @@
+<div class="banner py-5 text-white d-flex justify-content-center align-items-center" style="height: 400px; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1535016120720-40c646be5580?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');background-position: center; background-size: cover;">
+  <h1> My film lists </h1>
+</div>
+
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="d-flex flex-column justify-content-center" style="width: 300px;">
+    <% @lists.each do |list| %>
+      <%= link_to list.name, list_path(list), class: "btn btn-primary my-1" %>
+    <% end %>
+  </div>
+
+</div>
+  <%= link_to "Create a new list", new_list_path %>
